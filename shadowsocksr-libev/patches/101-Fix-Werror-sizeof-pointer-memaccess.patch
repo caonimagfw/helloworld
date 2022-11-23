@@ -1,6 +1,6 @@
---- a/src/local.c
-+++ b/src/local.c
-@@ -718,7 +718,7 @@ server_recv_cb(EV_P_ ev_io *w, int reven
+--- a/src/local.c	2018-03-07 06:35:05.000000000 +0000
++++ b/src/local.c	2022-11-23 18:42:43.737490090 +0000
+@@ -718,7 +718,7 @@
  
                      ss_free(hostname);
                  } else {
