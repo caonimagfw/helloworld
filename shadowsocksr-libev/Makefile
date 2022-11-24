@@ -10,9 +10,11 @@ PKG_NAME:=shadowsocksr-libev
 PKG_VERSION:=2.5.6
 PKG_RELEASE:=9
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/caonimagfw/shadowsocksr-libev/tar.gz/$(PKG_VERSION)?
-PKG_HASH:=skip
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/caonimagfw/shadowsocksr-libev
+PKG_SOURCE_DATE:=2022-11-24
+PKG_SOURCE_VERSION:=348215d4a79aa3764ef7d2ac31c0bafc4c1a7ec1
+PKG_MIRROR_HASH:=skip
 
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILES:=LICENSE
@@ -30,7 +32,7 @@ define Package/shadowsocksr-libev/Default
     CATEGORY:=Network
     SUBMENU:=Web Servers/Proxies
     TITLE:=shadowsocksr-libev ssr-$(1)
-    URL:=https://github.com/shadowsocksrr/shadowsocksr-libev
+    URL:=https://github.com/caonimagfw/shadowsocksr-libev
     DEPENDS:=+libev +libsodium +libopenssl +libpthread +libpcre +libudns +zlib
   endef
 
