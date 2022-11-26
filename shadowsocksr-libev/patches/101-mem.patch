@@ -1,0 +1,11 @@
+--- a/src/local.c	2022-11-21 03:32:29.942996608 +0000
++++ b/src/local.c	2022-11-21 03:35:00.015003764 +0000
+@@ -718,7 +718,7 @@
+ 
+                     ss_free(hostname);
+                 } else {
+-                    strncpy(host, ip, sizeof(ip));
++                    strncpy(host, ip, INET6_ADDRSTRLEN);
+                 }
+             }
+ 
