@@ -31,4 +31,13 @@ define Package/ssr-tool-check/install
   $(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/ss-check $(1)/usr/bin/ssr-check
 endef
 
+CONFIGURE_ARGS += \
+	--disable-documentation \
+	--disable-ssp \
+	--disable-assert \
+	--enable-system-shared-lib
+
+TARGET_CFLAGS += -flto
+TARGET_LDFLAGS += -Wl,--gc-sections,--as-needed
+
 $(eval $(call BuildPackage,ssr-tool-check))
