@@ -19,16 +19,16 @@ PKG_BUILD_PARALLEL:=1
 include $(INCLUDE_DIR)/package.mk
 
 define Package/ssr-tool-check
-  SECTION:=net
-  CATEGORY:=Network
-  SUBMENU:=Web Servers/Proxies
-  TITLE:=ssr-tool-check ssr-check
-  URL:=https://github.com/shadowsocksrr/shadowsocksr-libev
+	SECTION:=net
+	CATEGORY:=Network
+	SUBMENU:=Web Servers/Proxies
+	TITLE:=ssr-tool-check ssr-check
+	URL:=https://github.com/shadowsocksrr/shadowsocksr-libev
 endef
 
 define Package/ssr-tool-check/install
-  $(INSTALL_DIR) $(1)/usr/bin
-  $(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/ss-check $(1)/usr/bin/ssr-check
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/ss-check $(1)/usr/bin/ssr-check
 endef
 
 CONFIGURE_ARGS += \
