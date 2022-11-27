@@ -28,7 +28,7 @@ endef
 
 define Package/ssr-tool-check/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/ss-check $(1)/usr/bin/ssr-check
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ssr-check $(1)/usr/bin/ssr-check
 endef
 
 CONFIGURE_ARGS += \
